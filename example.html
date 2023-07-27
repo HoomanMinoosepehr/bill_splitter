@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    ## Requirement template for Bill Splitter App 
+<ol>
+<li> Navbar
+<hr>
+App Logo | Bill Splitter | Billing Index
+<hr>
+</li>
+<li>
+App Logo<br>
+This page will show greeting message, information about your application, and you to use the application. You can also tax information. For example,
+<p>Meals: 5% GST<br>
+Alcoholic beverages: 10% PST + 5% GST<br>
+</p>
+<hr>
+</li>
+<li>
+Bill Splitter<br>
+Restaurant Bill: <input> (required)<br>
+Tip(15% to 20%): <input> (not required)<br>
+Custom Tip: <input> (not required)<br>
+Tax: <input type="radio">GST <input type="radio">GST+PST(not required)<br>
+Number of People: <input>(required)<br>
+<input type="submit" value="Calculate Bill and Split">
+<hr>
+Show the Information <br>
+<table class="sortable" width="100%">
+ <thead>
+ <tr>
+ <td>Billing</td>
+ <td>Amount</td> 
+ </tr>
+ </thead>
+ <tbody>
+  <tr>
+    <td>Tip</td>
+    <td><input id="tip" type="number" step="any" readonly=""></td>
+  </tr>
+  <tr>
+    <td>Tax</td>
+    <td><input id="tip" type="number" step="any" readonly=""></td>
+  </tr>
+  <tr>
+    <td>All-In Total:</td>
+    <td><input id="totalbill" type="number" step="any" readonly=""></td>
+  </tr>
+  <tr>
+    <td>Tip Each Person:</td>
+    <td><input id="tipeach" type="number" step="any" readonly=""></td>
+  </tr>
+  <tr>
+    <td>Tax Each Person:</td>
+    <td><input id="tipeach" type="number" step="any" readonly=""></td>
+  </tr>
+  <tr>
+    <td>Total Each Person:</td>
+    <td><input id="totaleach" type="number" step="any" readonly=""></td>
+  </tr>
+ </tbody>
+ </table>
+ <input type="submit" value="Submit Billing Information">
+</li>
+<hr>
+<li>
+Save the submitted billing information in db.
+</li>
+<hr>
+<li>
+Billing Index<br>
+This page will show list submitted billing information with submission date and total billing amount. Clicking on a list will take to detail page showing all the information. In the detail page user can delete a bill.
+</li>
+<hr>
+<li>Optional/Stretch<br>
+Add a button in the detail page of submitted billing info where user can mark a bill resolved or unresolved.
+</li>
+<ol>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<%- include('../partials/header') %>
+    <div class="container text-center" style="width: 35rem;">
+        <h2 class="mt-3 text-primary">Bills:</h2>
+        <% if (data) {%>
+            <% for (let i of data) {%>
+                <a href="/bill_splitter/<%= i.id %>" style="text-decoration: none;">
+                    <div class="card mt-3">
+                        <div class="card-header"><%= i.created_at %></div>
+                        <div class="card-body">
+                            <table class="table text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>    
+                                    <tr>
+                                        <th>All in total</th>
+                                        <td><%= i.tPay %></td>
+                                    </tr>
+                                    <tr>
+                                        <th>Each Person's Share</th>
+                                        <td><%= i.each %></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </a>
+            <% } %>
+        <% } %>
+    </div>
+<%- include('../partials/footer') %>
